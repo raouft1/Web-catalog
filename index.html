@@ -1,1 +1,48 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>📘 كتالوج العروض</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📘 كتالوج العروض</h1>
+    <div>
+      <select id="langSelector" onchange="changeLanguage()">
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+        <option value="ber">ⵜⴰⵎⴰⵣⵉⵖⵜ</option>
+      </select>
+      <button onclick="toggleDarkMode()">🌓</button>
+    </div>
+  </header>
+
+  <input type="text" id="searchBox" placeholder="🔍 ابحث عن كتالوج..." onkeyup="filterCatalogs()" />
+
+  <div id="catalogList" class="catalog-list">
+    <div class="catalog-item">
+      <h3>💻 كتالوج لابتوبات</h3>
+      <p>📅 12 جوان 2024 | 📂 PDF</p>
+      <a href="https://example.com/catalog1.pdf" target="_blank">عرض</a>
+    </div>
+    <div class="catalog-item">
+      <h3>🖨️ عروض نهاية الأسبوع</h3>
+      <p>📅 10 جوان 2024 | 📂 PDF</p>
+      <a href="https://example.com/catalog2.pdf" target="_blank">عرض</a>
+    </div>
+    <div class="catalog-item">
+      <h3>🧾 قائمة أسعار</h3>
+      <p>📅 5 جوان 2024 | 📂 PDF</p>
+      <a href="https://example.com/catalog3.pdf" target="_blank">عرض</a>
+    </div>
+  </div>
+
+  <footer>🖼️ مكان الشعار</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
