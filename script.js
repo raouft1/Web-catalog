@@ -1,15 +1,17 @@
-function filterCatalogs() {
-  const input = document.getElementById("searchBox").value.toLowerCase();
-  const items = document.querySelectorAll(".catalog-item");
-  items.forEach(item => {
-    const text = item.innerText.toLowerCase();
-    item.style.display = text.includes(input) ? "" : "none";
+
+fetch("data.json")
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById("catalog");
+    data.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${product.image}" alt="صورة المنتج">
+        <h3>${product.name}</h3>
+        <p>${product.specs}</p>
+        <p><strong>${product.price}</strong></p>
+      `;
+      container.appendChild(card);
+    });
   });
-}
-function toggleDarkMode() {
-  document.body.classList.toggle("dark");
-}
-function changeLanguage() {
-  const lang = document.getElementById("langSelector").value;
-  alert("تم تغيير اللغة إلى: " + lang + " (عرض تجريبي فقط)");
-}
