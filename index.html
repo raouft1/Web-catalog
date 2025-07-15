@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>📘 كتالوج العروض</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>📘 كتالوج المنتجات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1 id="title">📘 كتالوج العروض</h1>
-    <div>
-      <select id="langSelector" onchange="changeLanguage()">
-        <option value="ar">العربية</option>
-        <option value="fr">Français</option>
-        <option value="en">English</option>
-      </select>
-      <button onclick="toggleDarkMode()">🌓</button>
-    </div>
+    <h1>📘 كتالوج المنتجات</h1>
+    <button onclick="toggleDarkMode()">🌓</button>
   </header>
 
-  <input type="text" id="searchBox" placeholder="🔍 ابحث..." onkeyup="filterCatalogs()" />
+  <main id="catalog" class="catalog-grid">
+    <p style="text-align:center; color: gray;" id="loading">⏳ جاري تحميل المنتجات...</p>
+  </main>
 
-  <section id="catalogList" class="catalog-list">
-    <!-- الكتالوجات تظهر هنا -->
-  </section>
-
-  <footer>🖼️ شعار شركتك | جميع الحقوق محفوظة © 2024</footer>
+  <footer>
+    <p>© 2024 - جميع الحقوق محفوظة | شعارك هنا</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
