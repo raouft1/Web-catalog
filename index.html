@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>📘 كتالوج العروض</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>📘 كتالوج العروض</h1>
+    <h1 id="title">📘 كتالوج العروض</h1>
     <div>
       <select id="langSelector" onchange="changeLanguage()">
         <option value="ar">العربية</option>
         <option value="fr">Français</option>
         <option value="en">English</option>
-        <option value="ber">ⵜⴰⵎⴰⵣⵉⵖⵜ</option>
       </select>
       <button onclick="toggleDarkMode()">🌓</button>
     </div>
   </header>
 
-  <input type="text" id="searchBox" placeholder="🔍 ابحث عن كتالوج..." onkeyup="filterCatalogs()" />
+  <input type="text" id="searchBox" placeholder="🔍 ابحث..." onkeyup="filterCatalogs()" />
 
-  <div id="catalogList" class="catalog-list">
-    <div class="catalog-item">
-      <h3>💻 كتالوج لابتوبات</h3>
-      <p>📅 12 جوان 2024 | 📂 PDF</p>
-      <a href="https://ci3.googleusercontent.com/meips/ADKq_NalOkEnreqrC66jF9KybvX8SDc--GM9zjYj2x5WK-uKZGBgQEYJc77swj8Z9PAKILN7JHRfBskhS0FYAx-LhVBnKiW6YnuNJJNTZQL0z4JO2zzTzG94mq5SeFGi=s0-d-e1-ft#https://drive-thirdparty.googleusercontent.com/32/type/application/pdf" target="_blank" class="btn">📄 عرض</a>
-    </div>
+  <section id="catalogList" class="catalog-list">
+    <!-- الكتالوجات تظهر هنا -->
+  </section>
 
-    <div class="catalog-item">
-      <h3>🖨️ عروض نهاية الأسبوع</h3>
-      <p>📅 10 جوان 2024 | 📂 PDF</p>
-      <a href="#" class="btn">📄 عرض</a>
-    </div>
-
-    <div class="catalog-item">
-      <h3>🧾 قائمة أسعار</h3>
-      <p>📅 5 جوان 2024 | 📂 PDF</p>
-      <a href="#" class="btn">📄 عرض</a>
-    </div>
-  </div>
-
-  <footer>🖼️ مكان الشعار الخاص بك</footer>
+  <footer>🖼️ شعار شركتك | جميع الحقوق محفوظة © 2024</footer>
 
   <script src="script.js"></script>
 </body>
